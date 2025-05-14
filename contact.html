@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak Otakatlat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Hubungi Otakatlat</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html">Fitur</a>
+      <a href="contact.html">Contact</a>
+      <div class="dropdown">
+        <button class="dropbtn">⋮</button>
+        <div class="dropdown-content">
+          <a href="#" id="toggleDarkMode">🌙 Dark Mode</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formulir Pendaftaran</h2>
+      <form id="formKontak">
+        <table class="tabel-kontak">
+          <tr>
+            <td><label for="nama">Nama:</label></td>
+            <td><input type="text" id="nama" name="nama" required/></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" required/></td>
+          </tr>
+          <tr>
+            <td><label for="minat">Minat Belajar:</label></td>
+            <td><input type="text" id="minat" name="minat" required/></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <button type="submit">Kirim</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Otakatlat</p>
+  </footer>
+  <script>
+  document.getElementById("formKontak").addEventListener("submit", function(e) {
+    e.preventDefault(); // mencegah form reload
+    alert("Pesan Anda terkirim.");
+    this.reset(); // reset form jika perlu
+  });
+</script>
+</body>
+</html>
